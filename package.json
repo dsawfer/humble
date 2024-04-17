@@ -1,17 +1,18 @@
 {
-  "name": "humble",
+  "name": "prizma",
   "version": "0.0.1",
   "description": "Script for collecting and visualizing front-end application performance metrics",
   "author": "dsawfer",
   "license": "MIT",
   "type": "module",
   "files": ["dist"],
-  "main": "./dist/humble.umd.cjs",
-  "module": "./dist/humble.js",
+  "main": "./dist/prizma.umd.cjs",
+  "module": "./dist/prizma.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "publish": "npm login & npm publish"
   },
   "devDependencies": {
     "@types/node": "^20.12.6",
