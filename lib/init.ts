@@ -1,7 +1,8 @@
 import { observe } from './observe';
 import { getSupportedMetrics } from './utils/getSupportedMetrics';
-import { Preset } from './types';
 import { getMetrics } from './utils/getMetrics';
+import { DEFAULT_CONFIG } from './constants';
+import { Config } from './types/common';
 
 console.log('Supported metrics:', getSupportedMetrics());
 
@@ -14,11 +15,11 @@ const callback = (list: PerformanceObserverEntryList) => {
 
 /**
  * Метод для инициализации сборщика метрик
- * @param preset - определяет список собираемых метрик, по умолчанию включен минимальный список
+ * @param config - конфиг с настройками библиотеки
  */
-export const init = (preset: Preset = 'min') => {
+export const init = (config: Config = DEFAULT_CONFIG) => {
   observe({
     POCallback: callback,
-    metrics: getMetrics(preset),
+    metrics: getMetrics(config.preset),
   });
 };

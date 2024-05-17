@@ -1,6 +1,6 @@
-import { Preset } from '../types';
-import { DEFAULT_METRICS, MIN_METRICS } from '../constants';
 import { getSupportedMetrics } from './getSupportedMetrics';
+import { DEFAULT_METRICS, MIN_METRICS } from '../presets';
+import { Preset } from '../types/common';
 
 export const getMetrics = (preset: Preset) => {
   switch (preset) {

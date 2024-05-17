@@ -1,7 +1,5 @@
-import { ObserveOptions } from './types';
 import { getSupportedMetrics } from './utils/getSupportedMetrics';
-
-console.log(PerformanceObserver.supportedEntryTypes);
+import { ObserveOptions } from './types/common';
 
 export const observe = (options: ObserveOptions) => {
   const observer = new PerformanceObserver((list) => {

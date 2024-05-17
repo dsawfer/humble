@@ -1,6 +1,6 @@
 {
   "name": "prizma",
-  "version": "0.0.15",
+  "version": "0.0.18",
   "description": "Script for collecting and visualizing front-end application performance metrics",
   "author": "dsawfer",
   "license": "MIT",
@@ -17,7 +17,7 @@
   "devDependencies": {
     "@types/node": "20.12.6",
     "prettier": "3.2.5",
-    "prizma": "0.0.11",
+    "prizma": "0.0.18",
     "vite": "5.1.6",
     "vite-plugin-dts": "3.8.3"
   },

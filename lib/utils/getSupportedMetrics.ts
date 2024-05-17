@@ -1,9 +1,9 @@
-import { ALL_METRICS } from '../constants';
+import { ALL_METRICS } from '../presets';
 
 const EXCLUDED_METRICS = ['resource', 'layout-shift'];
 
 /**
- * Get supported metrics except excluded
+ * Возвращает все доступные метрики для текущего приложения
  */
 export const getSupportedMetrics = () => {
   const supportedMetrics = PerformanceObserver.supportedEntryTypes || [];
