@@ -1,6 +1,6 @@
 {
   "name": "prizma",
-  "version": "0.0.18",
+  "version": "0.0.22",
   "description": "Script for collecting and visualizing front-end application performance metrics",
   "author": "dsawfer",
   "license": "MIT",

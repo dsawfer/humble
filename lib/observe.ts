@@ -1,4 +1,3 @@
-import { getSupportedMetrics } from './utils/getSupportedMetrics';
 import { ObserveOptions } from './types/common';
 
 export const observe = (options: ObserveOptions) => {
@@ -9,7 +8,7 @@ export const observe = (options: ObserveOptions) => {
   observer.observe({
     buffered: true,
     //https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/entryType
-    entryTypes: getSupportedMetrics(),
+    type: options.metric,
   });
 
   return observer;

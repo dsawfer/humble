@@ -1,3 +1,3 @@
-import { init } from 'prizma';
+import { init } from '../dist/modules/init';
 
 init();

@@ -1,6 +1,8 @@
+export type MetricCallback = (entries: PerformanceEntryList) => void;
+
 export interface ObserveOptions {
+  metric: string;
   POCallback: (list: PerformanceObserverEntryList) => void;
-  metrics: string[];
 }
 
 // interface PerformanceEntryMap {
