@@ -24,12 +24,17 @@ export interface ObserveOptions {
  */
 export type Preset = 'default' | 'min' | 'max';
 
-export type metric = {
+export interface Metric {
   name: string;
   value: number;
-};
+}
 
 export interface Config {
   preset: Preset;
   endpoint: string;
+}
+
+export interface ApiResponse {
+  result: any;
+  success: boolean;
 }

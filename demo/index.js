@@ -1,3 +1,5 @@
-import { init } from '../dist/modules/init';
+// import { init } from '../dist/prizma';
+
+import { init } from '../lib/index.ts';
 
 init();
