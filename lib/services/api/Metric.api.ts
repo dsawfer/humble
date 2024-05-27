@@ -1,9 +1,15 @@
 import { ApiService } from './Api';
 import { Metric } from '../../types/common';
 
-const API = '';
+class MetricsApi extends ApiService {
+  public init() {
+    this.post({
+      url: 'http://localhost:3000/api/init',
+    }).then((response) => {
+      console.log(response.result.message);
+    });
+  }
 
-class MetricApi extends ApiService {
   public status() {
     this.get({ url: 'http://localhost:3000/status' }).then((response) => {
       console.log(response.result.message);
@@ -20,4 +26,4 @@ class MetricApi extends ApiService {
   }
 }
 
-export const metricApi = new MetricApi();
+export const metricsApi = new MetricsApi();

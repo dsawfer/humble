@@ -4,21 +4,14 @@ import { getPresetMetrics } from './utils/getPresetMetrics';
 import { DEFAULT_CONFIG } from './constants';
 import { Config } from './types/common';
 import { getCallback } from './utils/getCallback';
-import { metricApi } from './services/api/Metric.api';
-
-// const callback = (list: PerformanceObserverEntryList) => {
-//   const entries = list.getEntries();
-//   for (const entry of entries) {
-//     console.log(entry);
-//   }
-// };
+import { metricsApi } from './services/api/Metric.api';
 
 /**
  * Метод для инициализации сборщика метрик
  * @param config - конфиг с настройками библиотеки
  */
 export const init = (config: Config = DEFAULT_CONFIG) => {
-  metricApi.status();
+  metricsApi.init();
 
   const supportedMetrics = getSupportedMetrics();
   const presetMetrics = getPresetMetrics(config.preset);

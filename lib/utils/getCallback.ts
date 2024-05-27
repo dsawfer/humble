@@ -1,5 +1,5 @@
 import { MetricCallback } from '../types/common';
-import { FCP, FP, LCP, LT } from '../callbacks';
+import { FCP, FID, LCP } from '../callbacks';
 
 export const getCallback = (metric: string): MetricCallback => {
   switch (metric) {
@@ -8,9 +8,7 @@ export const getCallback = (metric: string): MetricCallback => {
     case 'largest-contentful-paint':
       return LCP;
     case 'first-input':
-      return FP;
-    case 'longtask':
-      return LT;
+      return FID;
     default:
       return () => {};
   }
